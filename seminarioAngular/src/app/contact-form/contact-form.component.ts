@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactFormComponent implements OnInit {
 
-  constructor() { }
+  model = {
+    name: "",
+    age: false,
+    rrss: "",
+    username: ""
+  }
 
   ngOnInit(): void {
+  }
+  onSubmit(values: any):void{
+    console.log('Resultados Formulario', values);
+    console.log(this.model);
+
   }
 
 }
